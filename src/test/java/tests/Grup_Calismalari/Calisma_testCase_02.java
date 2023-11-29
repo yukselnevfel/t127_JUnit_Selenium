@@ -1,11 +1,8 @@
-package tests.day06_JUnitAssertions;
+package tests.Grup_Calismalari;
 
 import io.github.bonigarcia.wdm.WebDriverManager;
 import junit.framework.AssertionFailedError;
-import org.junit.AfterClass;
-import org.junit.Before;
-import org.junit.BeforeClass;
-import org.junit.Test;
+import org.junit.*;
 import org.openqa.selenium.By;
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.WebElement;
@@ -77,6 +74,25 @@ public class Calisma_testCase_02 {
             System.out.println("Hesaba giriş testi FAİLED");
 
         }
+    }
+    @Test
+    public void test03(){
+        //6. Enter correct email address and password
+        driver.findElement(By.xpath("(//input[@type='email'])[1]")).sendKeys("nevfel303@gmail.com");
+        driver.findElement(By.xpath("//input[@type='password']")).sendKeys("javacandir");
+        //7. Click 'login' button
+        driver.findElement(By.xpath("(//button[@type='submit'])[1]")).click();
+        //8. Verify that 'Logged in as username' is visible
+        WebElement loggedUserName =driver.findElement(By.xpath("//i[@class='fa fa-user']"));
+        Assert.assertTrue(loggedUserName.isDisplayed());
+    }
+    @Test
+    public void test04(){
+        //9. Click 'Delete Account' button
+        driver.findElement(By.xpath("(//a[@style='color:brown;'])[2]")).click();
+        //10. Verify that 'ACCOUNT DELETED!' is visible
+        WebElement accountDeletedYazi=driver.findElement(By.xpath("//h2[@class='title text-center']"));
+        Assert.assertTrue(accountDeletedYazi.isDisplayed());
     }
 
 
