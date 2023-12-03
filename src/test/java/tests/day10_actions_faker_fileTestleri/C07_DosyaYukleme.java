@@ -37,7 +37,7 @@ public class C07_DosyaYukleme extends TestBase {
         // logo.png'yi yukleyelim
 
         String dinamikDosyaYolu = System.getProperty("user.home") +   // herkeste farkli olan kisim
-                "/Downloads/logo.png";              // herkeste ortak olan kisim
+                "/Desktop/spectrum-logo.png";              // herkeste ortak olan kisim
 
         chooseFileButonu.sendKeys(dinamikDosyaYolu);
 

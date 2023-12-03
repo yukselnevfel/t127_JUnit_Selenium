@@ -17,7 +17,8 @@ public class C01_FacebookKullaniciOlusturma extends TestBase {
         //1- https://www.facebook.com adresine gidelim
         driver.get("https://www.facebook.com");
         //2- Cookies kabul edin
-        driver.findElement(By.xpath("//*[@data-cookiebanner='accept_button']")).click();
+        ReusableMethods.bekle(5);
+        //driver.findElement(By.xpath("//*[@data-cookiebanner='accept_button']")).click();
         ReusableMethods.bekle(2);
         //3- Yeni hesap olustur butonuna basalim
         driver.findElement(By.xpath("//*[@*='open-registration-form-button']")).click();

@@ -24,7 +24,7 @@ public class C02_ActionsAsagiyaInme extends TestBase {
         driver.switchTo().frame(iframeElementi);
         ReusableMethods.bekle(5);
 
-        driver.findElement(By.xpath("//button[@title='Play']")).click();
+        driver.findElement(By.xpath("//button[@title='Oynat']")).click();
         //5- videoyu calistirdiginizi test edin
         WebElement kontrolElementi = driver.findElement(By.xpath("//*[@*='ytp-play-button ytp-button']"));
         ReusableMethods.bekle(1);

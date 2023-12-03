@@ -13,7 +13,7 @@ public class C06_BilgisayardakiDosyayiTestEtme {
 
         // Downloads'da logo.png oldugunu test edin
 
-        String dosyaYolu = "/Users/ahmetbulutluoz/Downloads/logo.png";
+        String dosyaYolu = "C:\\Users\\Pc\\Desktop\\spectrum-logo.png";
 
         Assert.assertTrue(Files.exists(Paths.get(dosyaYolu)));
 
@@ -24,7 +24,7 @@ public class C06_BilgisayardakiDosyayiTestEtme {
         //          /Downloads/logo.png
 
         String dinamikDosyaYolu = System.getProperty("user.home") +
-                "/Downloads/logo.png";
+                "/Desktop/spectrum-logo.png";
 
         Assert.assertTrue(Files.exists(Paths.get(dinamikDosyaYolu)));
 
