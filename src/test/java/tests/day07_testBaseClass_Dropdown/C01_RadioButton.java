@@ -61,6 +61,7 @@ public class C01_RadioButton {
 
     @Test
     public void radioButtonYaziTesti(){
+        JavascriptExecutor jse = (JavascriptExecutor) driver;
         //	a. Verilen web sayfasına gidin.
         //	      https://testotomasyonu.com/form
         driver.get("https://testotomasyonu.com/form");
@@ -71,9 +72,10 @@ public class C01_RadioButton {
         // ama assertion'lar icin radio button'lara ihtiyacimiz var
         WebElement erkekRadioButtonYaziElementi = driver.findElement(By.xpath("//*[@for='inlineRadio2']"));
         ReusableMethods.bekle(2);
-        erkekRadioButtonYaziElementi.sendKeys(Keys.PAGE_DOWN);
+        //erkekRadioButtonYaziElementi.sendKeys(Keys.PAGE_DOWN);
+        jse.executeScript("arguments[0].click();",erkekRadioButtonYaziElementi);
         ReusableMethods.bekle(2);
-        erkekRadioButtonYaziElementi.click();
+        //erkekRadioButtonYaziElementi.click();
         ReusableMethods.bekle(2);
         WebElement kadinRadioButton = driver.findElement(By.id("inlineRadio1"));
         WebElement erkekRadioButton = driver.findElement(By.id("inlineRadio2"));

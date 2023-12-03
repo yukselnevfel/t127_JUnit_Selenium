@@ -8,36 +8,22 @@ import org.openqa.selenium.WebElement;
 import utilities.ReusableMethods;
 import utilities.TestBase;
 
-public class deneme extends TestBase {
-
-    // Gerekli yapiyi olusturun ve aşağıdaki görevi tamamlayın.
-
+public class deneme {
+    //1. Launch browser
     @Test
-    public void facebookRadioButton() {
-        JavascriptExecutor jse = (JavascriptExecutor) driver;
-        // 	a. Verilen web sayfasına gidin.
-        // 	     https://facebook.com
-        driver.get("https://facebook.com");
+    public void Test01() {
 
-        // 	b. Cookies’i kabul edin
+        //2. Navigate to url 'http://automationexercise.com'
+       // driver.get("http://automationexercise.com");
+        //3. Verify that home page is visible successfully
+       // String actualBaslik = driver.getTitle();
+        String expectedBaslik = "Automation Exercise";
+       // Assert.assertTrue(actualBaslik.equals(expectedBaslik));
+        //4. Click on 'Test Cases' button
+      //  driver.findElement(By.xpath("(//i[@class='fa fa-list'])[1]")).click();
+        //5. Verify user is navigated to test cases page successfully
+       // WebElement expectedTestcaseTitle = driver.findElement(By.xpath("//h2[@class='title text-center']"));
+       // Assert.assertTrue(expectedTestcaseTitle.isDisplayed());
 
-
-        // 	c. Create an account buton’una basin
-        driver.findElement(By.xpath("//a[@class='_42ft 4jy0 6lti 4jy6 4jy2 selected _51sy']")).click();
-
-        // 	d. Radio button elementlerini locate edin ve size uygun olani secin
-        WebElement kadinRB = driver.findElement(By.xpath("(//span[@class='_5k_2 _5dba'])[1]"));
-        WebElement erkekRB = driver.findElement(By.xpath("(//span[@class='_5k_2 _5dba'])[2]"));
-        WebElement ozelRB = driver.findElement(By.xpath("(//span[@class='_5k_2 _5dba'])[3]"));
-
-        erkekRB.click();
-
-        Assert.assertTrue(erkekRB.isSelected());
-        jse.executeScript("arguments[0].isSelected();", erkekRB);
-        Assert.assertFalse(kadinRB.isSelected());
-        Assert.assertFalse(ozelRB.isSelected());
-
-
-        ReusableMethods.bekle(3);
     }
 }

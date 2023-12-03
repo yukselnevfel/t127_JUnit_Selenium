@@ -16,13 +16,13 @@ public class C02_ActionsAsagiyaInme extends TestBase {
         driver.get("https://html.com/tags/iframe/");
         //3- video’yu gorecek kadar asagi inin
         Actions actions = new Actions(driver);
-        actions.sendKeys(Keys.PAGE_DOWN).perform();
+        actions.sendKeys(Keys.PAGE_DOWN).sendKeys(Keys.PAGE_DOWN).perform();
         //4- videoyu izlemek icin Play tusuna basin
         // play butonu iframe icinde oldugundan, once iframe'e gecis yapalim
 
         WebElement iframeElementi = driver.findElement(By.xpath("//iframe[@src='https://www.youtube.com/embed/owsfdh4gxyc']"));
         driver.switchTo().frame(iframeElementi);
-        ReusableMethods.bekle(1);
+        ReusableMethods.bekle(5);
 
         driver.findElement(By.xpath("//button[@title='Play']")).click();
         //5- videoyu calistirdiginizi test edin
