@@ -1,4 +1,4 @@
-package tests.day12_webTables_excelOtomasyon.Grup_Calismalari;
+package tests.Grup_Calismalari;
 
 public class Calisma_105page {
 

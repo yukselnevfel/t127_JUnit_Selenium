@@ -1,4 +1,4 @@
-package tests.day12_webTables_excelOtomasyon.Grup_Calismalari;
+package tests.Grup_Calismalari;
 
 import io.github.bonigarcia.wdm.WebDriverManager;
 import junit.framework.AssertionFailedError;
