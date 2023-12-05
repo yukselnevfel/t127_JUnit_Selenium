@@ -19,9 +19,9 @@ public class C03_IFrame extends TestBase {
             //Cookies kabul edin
             // cookies de iframe icinde oldugundan
             // once o iframe'e gecis yapalim
-            WebElement cookiesIFrame = driver.findElement(By.xpath("(//iframe)[4]"));
-            driver.switchTo().frame(cookiesIFrame);
-            driver.findElement(By.xpath("//*[text()='Accept All']")).click();
+           // WebElement cookiesIFrame = driver.findElement(By.xpath("(//iframe)[4]"));
+            //driver.switchTo().frame(cookiesIFrame);
+           // driver.findElement(By.xpath("//*[text()='Accept All']")).click();
 
             //3) sayfadaki iframe sayısını bulunuz.
 
@@ -32,7 +32,7 @@ public class C03_IFrame extends TestBase {
             WebElement playIFrame = driver.findElement(By.xpath("(//iframe)[4]"));
             driver.switchTo().frame(playIFrame);
 
-            driver.findElement(By.xpath("//button[@title='Play']")).click();
+            driver.findElement(By.xpath("//button[@title='Oynat']")).click();
             ReusableMethods.bekle(2);
             //5) ilk iframe'den çıkıp ana sayfaya dönünüz
             driver.switchTo().defaultContent();
