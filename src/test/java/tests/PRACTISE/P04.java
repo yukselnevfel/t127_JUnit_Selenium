@@ -63,6 +63,7 @@ public class P04 extends TestBase {
         driver.findElement(By.id("zipcode")).sendKeys(zipCode);
         String mobilePhone=faker.phoneNumber().phoneNumber();
         driver.findElement(By.id("mobile_number")).sendKeys(mobilePhone);
+       // driver.findElement(By.id("mobile_number")).sendKeys(mobilephone+ Keys.PAGE_DOWN);//sayfayı görmezse
         driver.findElement(By.xpath("//button[@data-qa='create-account']")).click();
         // 6-Üye kaydinin yapildiği mesajının göründğünü doğrulayın
         WebElement message= driver.findElement(By.xpath("//h2[@data-qa='account-created']"));
